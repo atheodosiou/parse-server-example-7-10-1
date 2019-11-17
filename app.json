@@ -3,25 +3,34 @@
   "description": "An example Parse API server using the parse-server module",
   "repository": "https://github.com/ParsePlatform/parse-server-example",
   "logo": "https://avatars0.githubusercontent.com/u/1294580?v=3&s=200",
-  "keywords": ["node", "express", "parse"],
+  "keywords": [
+    "node",
+    "express",
+    "parse"
+  ],
   "env": {
+    "MONGODB_URI": {
+      "value": "mongodb://tasos:tasos@landmarks-shard-00-00-rz7xh.mongodb.net:27017,landmarks-shard-00-01-rz7xh.mongodb.net:27017,landmarks-shard-00-02-rz7xh.mongodb.net:27017/test?ssl=true&replicaSet=landmarks-shard-0&authSource=admin&retryWrites=true&w=majority"
+    },
     "PARSE_MOUNT": {
       "description": "Configure Parse API route.",
       "value": "/parse"
     },
     "APP_ID": {
       "description": "A unique identifier for your app.",
-      "value": "myAppId"
+      "value": "instashopInterviewAppId"
     },
     "MASTER_KEY": {
       "description": "A key that overrides all permissions. Keep this secret.",
-      "value": "myMasterKey"
+      "value": "instashopInterviewMasterKey"
     },
     "SERVER_URL": {
       "description": "URL to connect to your Heroku instance (update with your app's name + PARSE_MOUNT)",
-      "value": "http://yourappname.herokuapp.com/parse"
+      "value": "http://instashop-demo.herokuapp.com/parse"
     }
   },
   "image": "heroku/nodejs",
-  "addons": ["mongolab"]
+  "addons": [
+    "mongolab"
+  ]
 }
